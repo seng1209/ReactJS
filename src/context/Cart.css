@@ -1,0 +1,40 @@
+.container-cart {
+  padding: 100px;
+}
+
+.cart-section {
+  margin: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-img img {
+  width: 100%;
+  height: 240px;
+}
+
+.cart-details {
+  text-align: left;
+}
+
+.input {
+  width: 40px;
+}
+
+.removeBtn {
+  padding: 4px 8px;
+  border-radius: 9px;
+  border: none;
+  background-color: rgb(196, 48, 48);
+  color: #fff;
+}
+
+.removeBtn:hover {
+  background-color: rgb(185, 16, 16);
+}
+
+.cart-body {
+  display: flex;
+  justify-content: space-between;
+}
