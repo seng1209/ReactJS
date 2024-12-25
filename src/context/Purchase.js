@@ -58,9 +58,7 @@ const Purchase = () => {
                 <img
                   src={product.image}
                   alt="product image"
-                  // style={{ width: "100%", height: "480px" }}
                 />
-                {/* <img src="assets/images/single-product-02.jpg" alt="" /> */}
               </div>
             </div>
             <div className="col-lg-4">

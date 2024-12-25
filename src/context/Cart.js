@@ -2,6 +2,7 @@ import React from "react";
 import { useCart } from "../context/CartContext";
 import "./Cart.css";
 import PayPalButton from "../paypal/PayPalButton";
+import Navigation from "../components/Navigation";
 
 const Cart = () => {
   const {
@@ -11,7 +12,6 @@ const Cart = () => {
     decrementQuantity,
     incrementQuantity,
     getTotalPrice,
-    // clearCart,
   } = useCart();
 
   const removeAll = () => {
@@ -21,6 +21,7 @@ const Cart = () => {
 
   return (
     <>
+      <Navigation />
       <div className="container-cart">
         <h2 className="y-cart">Your Cart</h2>
         {cartItems.length === 0 ? (

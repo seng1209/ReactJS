@@ -39,7 +39,7 @@ function App() {
     <CartProvider>
       <div className="App">
         <Router>
-          <Header />
+          {/* <Header /> */}
           <Routes>
             <Route path="/">
               <Route path="" element={<Home />} />

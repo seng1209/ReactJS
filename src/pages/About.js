@@ -1,11 +1,11 @@
 import React from "react";
 
-import Header from "../components/Header";
+import Navigation from "../components/Navigation";
 
 const About = () => {
   return (
     <div>
-      {/* <Header /> */}
+      <Navigation />
       {/* <!-- ***** Main Banner Area Start ***** --> */}
       <div class="page-heading about-page-heading" id="top">
         <div class="container">

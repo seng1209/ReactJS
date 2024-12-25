@@ -25,6 +25,7 @@ const PayPalButton = ({ totalAmount }) => {
               // Handle successful transaction here
               localStorage.clear();
               window.location.reload();
+              alert("Thank you for your puchase.");
             });
           },
           onError: (err) => {

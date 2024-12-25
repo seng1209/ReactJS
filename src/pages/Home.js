@@ -82,7 +82,8 @@ const Home = () => {
 
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
+
       <div className="main-banner" id="top">
         <div className="container-fluid">
           <div className="row">
@@ -93,7 +94,16 @@ const Home = () => {
                     <h4>We Are Hexashop</h4>
                     <span>Awesome, clean &amp; creative HTML5 Template</span>
                     <div className="main-border-button">
-                      <Link to="products">Purchase Now!</Link>
+                      <Link
+                        to="/products"
+                        onClick={() => {
+                          setTimeout(() => {
+                            window.location.reload();
+                          }, 500);
+                        }}
+                      >
+                        Purchase Now!
+                      </Link>
                     </div>
                   </div>
                   <img
@@ -122,7 +132,7 @@ const Home = () => {
                               adipiscing elit incid.
                             </p>
                             <div className="main-border-button">
-                              <Link to="/#women">Discover More</Link>
+                              <Link to="#women">Discover More</Link>
                             </div>
                           </div>
                         </div>
@@ -149,7 +159,7 @@ const Home = () => {
                               adipiscing elit incid.
                             </p>
                             <div className="main-border-button">
-                              <Link to="/#men">Discover More</Link>
+                              <Link to="#men">Discover More</Link>
                             </div>
                           </div>
                         </div>
@@ -175,7 +185,7 @@ const Home = () => {
                               adipiscing elit incid.
                             </p>
                             <div className="main-border-button">
-                              <Link to="/#jewelery">Discover More</Link>
+                              <Link to="#jewelery">Discover More</Link>
                             </div>
                           </div>
                         </div>
@@ -201,7 +211,7 @@ const Home = () => {
                               adipiscing elit incid.
                             </p>
                             <div className="main-border-button">
-                              <Link href="/#electronics">Discover More</Link>
+                              <Link href="#electronics">Discover More</Link>
                             </div>
                           </div>
                         </div>

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 import { useCart } from "../context/CartContext";
 
+import Navigation from "../components/Navigation";
+
 const Products = () => {
   const [products, setProducts] = useState([]);
 
@@ -24,6 +26,7 @@ const Products = () => {
   return (
     <div>
       <>
+      <Navigation />
         <div className="page-heading" id="top">
           <div className="container">
             <div className="row">
@@ -31,7 +34,8 @@ const Products = () => {
                 <div className="inner-content">
                   <h2>Check Our Products</h2>
                   <span>
-                    Awesome &amp; Creative React JS + JQuery + React Router DOM....
+                    Awesome &amp; Creative React JS + JQuery + React Router
+                    DOM....
                   </span>
                 </div>
               </div>

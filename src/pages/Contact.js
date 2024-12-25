@@ -1,8 +1,11 @@
 import React from "react";
 
+import Navigation from "../components/Navigation";
+
 const Contact = () => {
   return (
     <>
+    <Navigation />
       <div className="page-heading about-page-heading" id="top">
         <div className="container">
           <div className="row">

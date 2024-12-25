@@ -2,27 +2,9 @@ import React, { useEffect } from "react";
 import { IoCartOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
-import $ from "jquery";
 
 const Header = () => {
   const { cartItems } = useCart();
-
-  useEffect(() => {
-    $(".scroll-to-section a").on("click", function (event) {
-      event.preventDefault(); // Prevent default anchor click behavior
-      const href = $(this).attr("href"); // Get the target section from the href attribute
-      console.log(href);
-      console.log($(href).offset().top);
-
-      // Smooth scroll to the target section
-      $("html, body").animate(
-        {
-          scrollTop: $(href).offset().top,
-        },
-        1000 // Duration of the scroll
-      );
-    });
-  }, []);
 
   return (
     <div>
@@ -64,13 +46,40 @@ const Header = () => {
                     <a href="javascript:void(0);">Pages</a>
                     <ul>
                       <li>
-                        <Link to="/about">About Us</Link>
+                        <Link
+                          to="/about"
+                          onClick={() => {
+                            setTimeout(() => {
+                              window.location.reload();
+                            }, 500);
+                          }}
+                        >
+                          About Us
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/products">Products</Link>
+                        <Link
+                          to="/products"
+                          onClick={() => {
+                            setTimeout(() => {
+                              window.location.reload();
+                            }, 500);
+                          }}
+                        >
+                          Products
+                        </Link>
                       </li>
                       <li>
-                        <Link to="/contact">Contact Us</Link>
+                        <Link
+                          to="/contact"
+                          onClick={() => {
+                            setTimeout(() => {
+                              window.location.reload();
+                            }, 500);
+                          }}
+                        >
+                          Contact Us
+                        </Link>
                       </li>
                     </ul>
                   </li>
@@ -78,9 +87,18 @@ const Header = () => {
                     <a href="#explore">Explore</a>
                   </li>
                   <li>
-                    <Link to="/cart">
+                    <Link
+                      to="/cart"
+                      onClick={() => {
+                        setTimeout(() => {
+                          window.location.reload();
+                        }, 500);
+                      }}
+                    >
                       <IoCartOutline size={32} />{" "}
-                      <span>{cartItems.length}</span>
+                      <span>
+                        {cartItems.length}
+                      </span>
                     </Link>
                   </li>
                 </ul>

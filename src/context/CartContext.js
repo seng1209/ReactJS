@@ -58,10 +58,6 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  const clearCart = () => {
-    setCartItems([]);
-    window.location.reload();
-  };
 
   return (
     <CartContext.Provider
@@ -72,7 +68,6 @@ export const CartProvider = ({ children }) => {
         incrementQuantity,
         decrementQuantity,
         getTotalPrice,
-        clearCart,
       }}
     >
       {children}
